@@ -27,10 +27,15 @@ const server = app.listen(port, error => {
   }
 });
 
+// Grab the stored data from its .json file
+let peopleData = require('./persistent/people.json');
+
 // Create a socket.io instance using the server
 const io = require('socket.io')(server);
 
 io.on('connection', client => {
+  io.emit('peopleData', peopleData);
+
   client.on('message', data => {
     console.log('Message received: ' + data);
   });
