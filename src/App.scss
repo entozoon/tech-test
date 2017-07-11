@@ -1,0 +1,26 @@
+/**
+ * App styles
+ */
+$g: 30px;
+$brand-1: #009396;
+$brand-2: #fcc6a6;
+$brand-3: #b3598f;
+$brand-4: #3c6abc;
+
+@import 'node_modules/simple-css-reset/reset';
+@import 'node_modules/font-awesome/scss/variables';
+@import 'components/typography/typography';
+
+body {
+  padding: 0;
+  margin: 0;
+  color: $brand-4;
+  background: $brand-2;
+}
+
+.wrapper {
+  max-width: 1440px;
+  min-width: 320px;
+  padding: 10px;
+  margin: 0 auto;
+}
