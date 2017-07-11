@@ -22,6 +22,12 @@ To build the project for the production server, run:
 
     npm run build
 
+## Run Tests
+
+Unit tests are set up to notice very basic hangups to show the concept, rather than pick up issues exhaustively.
+
+    npm test
+
 ## Technologies Used
 
 - [Express](https://github.com/expressjs/express) - Node based web framework
