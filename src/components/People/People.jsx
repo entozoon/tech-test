@@ -7,8 +7,12 @@ export default class People extends Component {
     this.state = props;
   }
 
+  /**
+   * personChanged
+   * When a child <Person> is changed, update the state of all items and notify the parent (App)
+   */
   personChanged(i, key, value) {
-    console.log('(' + i + ') ' + key + ': ' + value);
+    // Update the specific entry in the people state array
     let people = this.state.people;
     people[i][key] = value;
 
@@ -16,13 +20,14 @@ export default class People extends Component {
       people: people
     });
 
-    // Tell the parent component that there's been a change
+    // Tell the parent component about the change
     this.props.peopleChanged();
   }
 
   /**
    * Render
-   * Use the people data to generate dynamic markup similar to that in the provided example
+   * Use the people data to generate dynamic markup similar to that in the provided example.
+   * When a <Person> is changed, the values are received and handled
    */
   render() {
     return (

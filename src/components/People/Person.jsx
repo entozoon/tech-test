@@ -6,19 +6,9 @@ export default class Person extends Component {
     this.state = props.person;
   }
 
-  // /**
-  //  * Change a specific state by given key value pair
-  //  * @param  {string} key   Any key such as 'firstname'
-  //  * @param  {any}    value
-  //  * @return null
-  //  */
-  // changeValue(key, value) {
-  //   this.setState({ [key]: value });
-  //
-  //   // Tell the parent component about this update
-  //   this.props.changeOccurred(this);
-  // }
-
+  /**
+   * Create <input> elements which, when changed, pass their keys and values to parent (People)
+   */
   render() {
     return (
       <tr className="Person">

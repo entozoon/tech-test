@@ -6,14 +6,17 @@ import io from 'socket.io-client';
 class App extends Component {
   constructor(props) {
     super(props);
+
+    // Create socket connection to the local server
     this.socket = io('http://localhost:3000');
+
     this.state = {
       peopleData: []
     };
   }
 
   componentDidMount() {
-    // Test socket.io by sending the server a message
+    // Test socket.io connection by sending the server a message
     console.log('emitting message: hello');
     this.socket.emit('message', 'Hello from the client');
 
