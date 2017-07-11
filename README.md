@@ -1,19 +1,26 @@
 # Tech Test
 
-## Install and Start App
+## Installation
 
     npm install
+
+## Run the server and app
+
     npm start
 
-## Develop
+## Development
 
-During development of the front end, the project is served from /public and compiled by:
+During development of the front end, start the server with:
 
-  npm run develop
+    npm run serve
+
+And simultaneously, let the front end compile by running:
+
+    npm run compile
 
 To build the project for the production server, run:
 
-  npm run build
+    npm run build
 
 ## Technologies Used
 

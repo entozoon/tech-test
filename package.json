@@ -1,6 +1,7 @@
 {
   "name": "tech-test",
   "version": "0.1.0",
+  "private": true,
   "main": "server.js",
   "repository": {
     "type": "git",
@@ -8,7 +9,10 @@
   },
   "author": "Michael Cook <entozoon@gmail.com>",
   "dependencies": {
+    "eslint": "^4.2.0",
+    "eslint-plugin-react": "^7.1.0",
     "express": "^4.15.3",
+    "font-awesome": "^4.7.0",
     "npm-run-all": "^4.0.2",
     "opn-cli": "^3.1.0",
     "react": "^15.6.1",
@@ -18,9 +22,9 @@
   },
   "scripts": {
     "start": "npm-run-all --parallel serve open",
-    "open": "opn http://localhost:3000",
     "serve": "node server.js",
-    "develop": "react-scripts start",
-    "build": "react-scripts build"
+    "compile": "react-scripts start",
+    "build": "react-scripts build",
+    "open": "opn http://localhost:3000"
   }
 }
