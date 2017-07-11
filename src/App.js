@@ -14,12 +14,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <h2>dwadwa to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <header>
+          <h1>Sky Betting &amp; Gaming Technical Test</h1>
+        </header>
+
+        <p>Lorem</p>
       </div>
     );
   }
