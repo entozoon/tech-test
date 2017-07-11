@@ -1,5 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
+import People from './components/People/People';
 import io from 'socket.io-client';
 
 class App extends Component {
@@ -22,6 +23,13 @@ class App extends Component {
     });
   }
 
+  /**
+   * People have changed, so emit the new set of data for the server to handle
+   */
+  peopleChanged() {
+    this.socket.emit('peopleData', this.state.peopleData);
+  }
+
   render() {
     return (
       <div className="App">
@@ -29,12 +37,8 @@ class App extends Component {
           <h1>Sky Betting &amp; Gaming Technical Test</h1>
         </header>
 
-        <div>
-          {this.state.peopleData.length > 0 &&
-            <p>
-              Received item count: {this.state.peopleData.length}
-            </p>}
-        </div>
+        {this.state.peopleData.length > 0 &&
+          <People people={this.state.peopleData} peopleChanged={this.peopleChanged.bind(this)} />}
       </div>
     );
   }
