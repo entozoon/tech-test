@@ -33,7 +33,7 @@ And simultaneously, let the front end compile by running:
 
     npm run compile
 
-To build the project for the production server, run:
+## Build for production server
 
     npm run build
 

@@ -37,7 +37,7 @@ const io = require('socket.io')(server);
 
 // User connected
 io.on('connection', socket => {
-  console.log('Client connected from ' + socket.handshake.address);
+  console.log('\nClient connected from ' + socket.handshake.address);
 
   // Grab the stored data from its .json file
   // Using fs.readFile rather than require() because it doesn't update as reliably

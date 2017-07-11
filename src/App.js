@@ -1,5 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
+import Header from './components/Header/Header';
 import People from './components/People/People';
 import io from 'socket.io-client';
 
@@ -17,7 +18,6 @@ class App extends Component {
 
   componentDidMount() {
     // Test socket.io connection by sending the server a message
-    console.log('emitting message: hello');
     this.socket.emit('message', 'Hello from the client');
 
     // When receiving peopleData from server, save it as a state
@@ -36,12 +36,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-          <h1>Sky Betting &amp; Gaming Technical Test</h1>
-        </header>
+        <Header />
 
-        {this.state.peopleData.length > 0 &&
-          <People people={this.state.peopleData} peopleChanged={this.peopleChanged.bind(this)} />}
+        <div className="wrapper">
+          {this.state.peopleData.length > 0 &&
+            <People people={this.state.peopleData} peopleChanged={this.peopleChanged.bind(this)} />}
+        </div>
       </div>
     );
   }
