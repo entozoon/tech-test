@@ -2,7 +2,8 @@
 @import 'vars';
 @import 'node_modules/simple-css-reset/reset';
 @import 'node_modules/font-awesome/scss/variables';
-@import 'components/typography/typography';
+@import 'typography';
+@import 'utilities';
 
 body {
   padding: 15px; // fallback

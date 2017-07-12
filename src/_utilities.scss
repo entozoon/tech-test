@@ -1,0 +1,64 @@
+@import 'node_modules/font-awesome/scss/variables';
+
+@mixin table-reset {
+  width: 100%;
+  margin: $g 0;
+  th,
+  td {
+    padding: round($g * .5);
+    text-align: left;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  .form-group {
+    position: relative;
+  }
+  input {
+    width: 100%;
+  }
+}
+
+/**
+ * Font-awesome icon - inject as a ::before or ::after pseudo element
+ *
+ * @param  string   $char      Font-awesome character (e.g. $fa-var-envelope)
+ * @param  string   $position  [before/after] (default: before)
+ * @param  content  {}         Styles that apply to the icon
+ *
+ * List of font-awesome variables (although they're guessable):
+ * https://github.com/FortAwesome/Font-Awesome/blob/master/scss/_variables.scss
+ *
+	// Simple example - an envelope icon before start of element:
+	@include fa($fa-var-envelope);
+
+	// Styled icon after element:
+	@include fa($fa-var-envelope, after) {
+		display: inline-block;
+		margin-left: 5px;
+		color: #55f;
+	}
+ */
+@mixin fa($char: null, $position: before) {
+  // $char content can be empty, say if inheriting from a parent
+  @if ($char != null) {
+    &::#{$position} {
+      content: "#{$char} ";
+    }
+  }
+  &::#{$position} {
+    display: inline-block;
+    font-family: fontawesome;
+    font-style: normal;
+    font-weight: normal;
+    // underline must be set, then unset - ie8 fix
+    text-decoration: underline;
+  }
+  &::#{$position} {
+    text-decoration: none;
+    @content;
+  }
+}

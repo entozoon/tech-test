@@ -1,3 +1,4 @@
+import './People.css';
 import React, { Component } from 'react';
 import Person from './Person';
 
@@ -33,7 +34,12 @@ export default class People extends Component {
     return (
       <div>
         <h2>People</h2>
-        <table className="People">
+        <p>
+          These people are stored on the server. When you edit the values, they get saved
+          instantaneously.
+        </p>
+
+        <table className="people">
           <thead>
             <tr>
               <th>First name</th>

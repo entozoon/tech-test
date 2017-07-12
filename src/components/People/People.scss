@@ -1,0 +1,36 @@
+@import '../../vars';
+@import '../../utilities';
+
+.people {
+  @include table-reset;
+  max-width: 720px;
+  input {
+    padding: round($g * .75) $g;
+    transition: box-shadow .1s ease-out;
+    // Pencil edit icons
+    + i {
+      $size: 18px;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      margin-top: - $size * .6;
+      font-size: $size;
+      line-height: 1;
+      pointer-events: none; // allow clicking through to input
+      opacity: 1;
+      transition: opacity .1s ease-out;
+      @include fa($fa-var-pencil, after) {
+        color: $brand-4;
+      }
+    }
+    // When focussing on input, add a shadow and hide edit icon
+    &:focus,
+    &:active {
+      outline: none;
+      box-shadow: 0 0 10px 1px rgba($brand-1, .5);
+      + i {
+        opacity: 0;
+      }
+    }
+  }
+}

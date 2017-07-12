@@ -13,19 +13,25 @@ export default class Person extends Component {
     return (
       <tr className="Person">
         <td>
-          <input
-            type="text"
-            value={this.state.firstname}
-            onChange={event => this.props.change('firstname', event.target.value)}
-          />
+          <div className="form-group">
+            <input
+              type="text"
+              value={this.state.firstname}
+              onChange={event => this.props.change('firstname', event.target.value)}
+            />
+            <i />
+          </div>
         </td>
 
         <td>
-          <input
-            type="text"
-            value={this.state.surname}
-            onChange={event => this.props.change('surname', event.target.value)}
-          />
+          <div className="form-group">
+            <input
+              type="text"
+              value={this.state.surname}
+              onChange={event => this.props.change('surname', event.target.value)}
+            />
+            <i />
+          </div>
         </td>
       </tr>
     );

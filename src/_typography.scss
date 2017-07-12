@@ -1,0 +1,22 @@
+html {
+  font-size: 100%;
+}
+body {
+  font-size: 62.5%; // so 1rem = 10px
+}
+.wrapper {
+  font-size: 16px;
+}
+
+body,
+input {
+  font-family: 'Open sans', sans-serif;
+}
+h1,
+h2 {
+  font-weight: bold;
+}
+h2 {
+  font-size: 26px; // fallback
+  font-size: calc(20px + 1vw);
+}
