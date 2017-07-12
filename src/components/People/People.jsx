@@ -25,6 +25,33 @@ export default class People extends Component {
     this.props.peopleChanged();
   }
 
+  addPerson() {
+    let people = this.state.people;
+
+    // Add an empty item to the array
+    people.push({});
+
+    this.setState({
+      people: people
+    });
+
+    // No need to notify parent, as it will update anyway when a value is given
+  }
+
+  removePerson() {
+    let people = this.state.people;
+
+    // Remove the final item
+    people.pop();
+
+    this.setState({
+      people: people
+    });
+
+    // Tell the parent of the change
+    this.props.peopleChanged();
+  }
+
   /**
    * Render
    * Use the people data to generate dynamic markup similar to that in the provided example.
@@ -60,6 +87,14 @@ export default class People extends Component {
             )}
           </tbody>
         </table>
+
+        <a onClick={this.addPerson.bind(this)} className="btn btn--add">
+          Add Person
+        </a>
+
+        <a onClick={this.removePerson.bind(this)} className="btn btn--remove">
+          Remove Person
+        </a>
       </div>
     );
   }

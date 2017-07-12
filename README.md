@@ -48,6 +48,8 @@ Unit tests are set up to notice very basic hangups to show the concept, rather t
 
 If I had more time, I'd proceed to start writing server and client-side validation for the inputs as well as typical CRUD features (add a person, remove, re-arrange the order, etc).
 
+Update: I added a simple add/remove the following morning as it was only five minutes work (thanks, React!).
+
 Also some extra UX touches would be nice, such as confirmation that your edit has indeed been saved on the server - perhaps a tick icon.
 
 This was a small project (5 or 6 hours over the course of one very long evening) to demonstrate a variety of skills. It is by no means a complex app but rather a well thought-out solution, lovingly built from the ground up.

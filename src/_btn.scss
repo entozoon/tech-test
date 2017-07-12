@@ -1,0 +1,49 @@
+@mixin btn {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: .5rem 1rem;
+  margin-right: $g * .5;
+  line-height: 1;
+  color: inherit;
+  transition: all .1s ease-out;
+  text-decoration: none;
+}
+
+@mixin btn-colors($bg, $fg) {
+  background: $bg;
+  color: $fg;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $fg;
+    background-color: darken($bg, 5);
+  }
+}
+
+@mixin btn-success {
+  @include btn-colors($brand-success, white);
+}
+
+@mixin btn-danger {
+  @include btn-colors($brand-danger, white);
+}
+
+.btn {
+  @include btn;
+
+  &--add {
+    @include btn-success;
+    @include fa($fa-var-plus-circle, before) {
+      margin-right: 5px;
+    }
+  }
+
+  &--remove {
+    @include btn-danger;
+    @include fa($fa-var-minus-circle, before) {
+      margin-right: 5px;
+    }
+  }
+}
