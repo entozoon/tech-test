@@ -1,5 +1,7 @@
 # Tech Test
 
+![screenshot](http://i.imgur.com/WFDvzGS.png)
+
 My approach to this (surprisingly fun) technical test was to try and write clean, consistent, readable code. Employing the KISS (Keep It Simple, Stupid!) method where possible but not re-inventing the wheel.
 
 So to that end, I chose to use the following key technologies to create the project:
