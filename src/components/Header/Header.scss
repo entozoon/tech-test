@@ -1,3 +1,33 @@
+@import '../../vars';
+
 .header {
-  background: black;
+  $background: $brand-1;
+  color: white;
+  .wrapper {
+    display: flex;
+    background: $background;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    padding-left: $g;
+    background: linear-gradient(to right, black, $background);
+    h1 {
+      padding: 0;
+      margin: 0;
+      font-size: 26px; // fallback
+      font-size: calc(20px + 1vw);
+    }
+  }
+  &__logo {
+    display: block;
+    width: 25%;
+    img {
+      display: block;
+      float: right;
+    }
+  }
 }

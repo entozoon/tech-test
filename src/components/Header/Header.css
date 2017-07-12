@@ -1,1 +1,1 @@
-.header{background:black}
+.header{color:white}.header .wrapper{display:flex;background:#0e2c6c;border-radius:10px;overflow:hidden}.header__title{display:flex;align-items:center;width:75%;padding-left:30px;background:linear-gradient(to right, black, #0e2c6c)}.header__title h1{padding:0;margin:0;font-size:26px;font-size:calc(20px + 1vw)}.header__logo{display:block;width:25%}.header__logo img{display:block;float:right}
