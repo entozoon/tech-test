@@ -14,7 +14,6 @@ So to that end, I chose to use the following key technologies to create the proj
 * [Eslint (react)](https://www.npmjs.com/package/eslint-plugin-react) - Coding standards are important!
 * [Scss Lint](https://github.com/brigade/scss-lint) - Even for Scss!
 
-
 ## Installation
 
     npm install
@@ -42,3 +41,11 @@ And simultaneously, let the front end compile by running:
 Unit tests are set up to notice very basic hangups to show the concept, rather than pick up issues exhaustively.
 
     npm test
+
+## Future Improvements
+
+If I had more time, I'd proceed to start writing server and client-side validation for the inputs as well as typical CRUD features (add a person, remove, re-arrange the order, etc).
+
+Also some extra UX touches would be nice, such as confirmation that your edit has indeed been saved on the server - perhaps a tick icon.
+
+This was a small project (5 or 6 hours over the course of one very long evening) to demonstrate a variety of skills. It is by no means a complex app but rather a well thought-out solution, lovingly built from the ground up.
